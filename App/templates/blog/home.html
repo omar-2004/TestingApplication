@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock %} {% block styles
+%}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='style/home.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='style/navbar.css') }}"
+/>
+<script defer src="{{url_for('static', filename='js/home.js')}}"></script>
+<script defer src="{{url_for('static', filename='js/navBar.js')}}"></script>
+{% endblock %} {% block header %} {% include "base/navbar.html" %} {% endblock
+%}
+<!--  -->
+{% block content%}
+
+<div class="container">
+  <div class="card">
+    <h1>touil omar</h1>
+    <h3>@touil.omar</h3>
+    <img src="{{url_for('static', filename='images/profile.png')}}" alt="" />
+  </div>
+  <div class="AllInformationNeeded">
+    <legend>Monthly analysist</legend>
+    <label for="ActualMonth">
+      <span>Actual Month</span>
+      <input type="text" name="ActualMonth" id="ActualMonth" disabled />
+    </label>
+    <label for="HoursInMonth">
+      <span>Total working hours</span>
+      <input type="text" name="HoursInMonth" id="HoursInMonth" disabled />
+    </label>
+    <legend>Yearly analysist</legend>
+    <label for="ActualYearly">
+      <span>Actual Yearly</span>
+      <input type="text" name="ActualYearly" id="ActualYearly" disabled />
+    </label>
+    <label for="HoursInYearly">
+      <span>Total working hours</span>
+      <input type="text" name="HoursInYearly" id="HoursInYearly" disabled />
+    </label>
+    <div class="redirectionLink">
+      <a href="#">See all</a>
+      <a href="#">Edit/Add</a>
+    </div>
+  </div>
+  {% endblock %}
+</div>

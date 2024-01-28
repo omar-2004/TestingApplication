@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block title %} Edit Account {% endblock %}
+<!--  -->
+{% block styles %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='style/editAccount.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='style/navbar.css') }}"
+/>
+<script
+  defer
+  src="{{url_for('static', filename='js/editAccount.js')}}"
+></script>
+<script defer src="{{url_for('static', filename='js/navBar.js')}}"></script>
+<!-- <meta http-equiv="refresh" content="2" /> -->
+{% endblock %}
+<!--  -->
+{% block header %} {% include "base/navbar.html" %} {% endblock %}
+<!--  -->
+{% block content%}
+
+<form action="#" method="post" onsubmit="return verif()">
+  <span>
+    <div class="img">
+      <img
+        src="{{url_for('static', filename='images/profile.png')}}"
+        id="ProfileImage"
+      />
+    </div>
+    <label for="image" id="inputFile" onmouseover="MouseHoverOnInput(this)"
+      >Update Image</label
+    >
+    <input type="file" name="image" id="image" accept="image/*" disabled />
+  </span>
+  <label for="FirstName">
+    First Name
+    <input
+      type="text"
+      name="FirstName"
+      id="FirstName"
+      placeholder="First Name"
+      required
+      disabled
+    />
+  </label>
+  <label for="LastName">
+    Last Name
+    <input
+      type="text"
+      name="LastName"
+      id="LastName"
+      placeholder="Last Name"
+      required
+      disabled
+    />
+  </label>
+  <label for="email">
+    email
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="email"
+      autocomplete="off"
+      required
+      disabled
+    />
+  </label>
+  <label for="PhoneNumber">
+    Phone Number
+    <input
+      type="number"
+      name="PhoneNumber"
+      id="PhoneNumber"
+      placeholder="Phone Number"
+      required
+      disabled
+    />
+  </label>
+  <label for="address">
+    address
+    <input
+      type="text"
+      name="address"
+      id="address"
+      placeholder="address"
+      autocomplete="off"
+      required
+      disabled
+    />
+  </label>
+  <label for="zipcode">
+    zipcode
+    <input
+      type="text"
+      name="zipcode"
+      id="zipcode"
+      placeholder="zipcode"
+      required
+      disabled
+    />
+  </label>
+  <label for="username">
+    username
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="username"
+      autocomplete="off"
+      required
+      disabled
+    />
+  </label>
+  <label for="password" id="passwordSection" hidden>
+    password
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="password"
+      required
+      disabled
+    />
+  </label>
+  <input type="button" value="Edit" onclick="ShowEdit(this)" />
+  <input type="reset" value="Cancel" hidden onclick="location.reload();" />
+  {%for msg in get_flashed_messages() %}
+  <p id="ErrorMsg">
+    msg {% if msg != "Password Updated Successfully" %}
+    <a href="#resetPassword">reset your password</a>
+    {% endif %}
+  </p>
+  {% endfor %}
+</form>
+
+<!--  -->
+{% endblock %}

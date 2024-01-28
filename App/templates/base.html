@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/8254f1fa07.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        min-height: 100vh;
+      }
+      header {
+        height: 10vh;
+      }
+      section {
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+      }
+      @media only screen and (max-width: 600px) {
+        section {
+          height: 100vh;
+        }
+        header {
+          height: 0vh;
+        }
+      }
+    </style>
+    {% block styles %}{% endblock %}
+    <title>{% block title %}Welcome!{% endblock %}</title>
+  </head>
+  <body>
+    <header>{% block header %} {% endblock %}</header>
+    <section>{% block content %}{% endblock %}</section>
+  </body>
+</html>

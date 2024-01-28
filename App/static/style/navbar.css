@@ -1,0 +1,36 @@
+@import "DEAULTS.css";
+nav {
+  z-index: 2;
+  transition: transform 0.3s;
+  position: sticky;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(105, 105, 105);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav a {
+  padding: 0.4em;
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    position: fixed;
+    bottom: 0;
+  }
+  nav a {
+    padding: 1em;
+  }
+  nav a span {
+    display: none;
+  }
+  nav a i {
+    font-size: calc(1rem + 1vw);
+  }
+  nav.hide {
+    transform: translateY(100%);
+  }
+}/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,118 @@
+@import "DEAULTS.css";
+.container {
+  width: clamp(350px, 55%, 800px);
+  height: 70vh;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 35px;
+}
+.container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 85%;
+}
+.container > *:nth-child(1) {
+  width: 40%;
+}
+.container > *:nth-child(1) h1 {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.container > *:nth-child(1) h3 {
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
+  text-transform: uppercase;
+  color: gray;
+}
+.container > *:nth-child(1) img {
+  width: 75%;
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center right;
+     object-position: center right;
+}
+.container > *:nth-child(2) {
+  width: 50%;
+}
+.container > *:nth-child(2) legend {
+  padding-bottom: 5px;
+  border-bottom: 5px solid #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.container > *:nth-child(2) label {
+  width: 100%;
+}
+.container > *:nth-child(2) label span {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.container > *:nth-child(2) label input {
+  height: clamp(1.5rem, 2vw, 2rem);
+  width: 50%;
+  float: right;
+}
+.container > *:nth-child(2) .redirectionLink {
+  width: 100%;
+  text-align: center;
+}
+.container > *:nth-child(2) .redirectionLink a {
+  margin: 0 2em;
+  text-decoration: none;
+  color: #000;
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2em 0em;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container > *:nth-child(1) {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding-top: 1.5em;
+  }
+  .container > *:nth-child(2) {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0em 2em;
+    padding-bottom: 3em;
+  }
+  .container > *:nth-child(2) legend {
+    width: 100%;
+    text-align: center;
+  }
+  .container > *:nth-child(2) label {
+    width: 100%;
+    text-align: center;
+  }
+  .container > *:nth-child(2) label span {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .container > *:nth-child(2) label input {
+    width: 100%;
+    float: none;
+  }
+}/*# sourceMappingURL=home.css.map */
