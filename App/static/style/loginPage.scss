@@ -1,0 +1,40 @@
+@import "DEAULTS.css";
+@import "AllColors.css";
+
+$primary-background-color: rgba(163, 157, 134, 0.6); // Blue
+$secondary-background-color: #a39d86; // Green
+$primary-text-color: #333; // Dark gray
+$secondary-text-color: #fff; // White
+
+//
+$error-color: #e74c3c; // Red
+$success-color: #2ecc71; // Green
+
+body {
+  min-height: 100vh;
+  background-color: $primary-background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 65vw;
+  height: 65vh;
+  background-color: $secondary-background-color;
+  border-radius: 10px;
+
+  .img {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    float: left;
+  }
+  form {
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    float: right;
+    display: flex;
+  }
+}
